@@ -1,0 +1,61 @@
+.grid-container {
+    @include grid();
+    margin-left: 30px;
+    grid-template-columns: auto;
+}
+
+.image {
+    position:relative;
+    width:80%;
+    height: auto;
+    margin:20px 50px 20px 20px;
+    & .flex{
+        @include flex();
+        margin: auto;
+        width:100%;
+        & .text {
+            @include text();
+            & .text-p{
+            @include text-p();
+            }
+        }
+        & .footer {
+            @include footer();
+            & .user {
+                @include user();
+            }
+            & .footer-text{
+                @include footer-text();
+                & h2{
+                    @include h2();
+                }
+                & .example{
+                    @include example();
+                }
+            }
+        }  
+    }
+    & .overlay {
+        @include flex2();
+        position: absolute;
+        top:0;
+        left:0;
+        width: $width;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+        &:hover {
+            opacity: 1;
+            background-color: $colorhover;
+            border-radius: $borderradius;
+        }
+        & .btn {
+            color: $colordark;
+            cursor: pointer;
+            width: auto;
+            height: 7%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import "./mixins";
+@import "./variables";
+@import "./flexmain";
+@import "./grid";
+@import "./social";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: $width;
+    overflow-x: hidden;
+    background-color:$backgroundcolor;
+    font-family: 'Oxygen', sans-serif;
+}
+
+@media all and (max-width:$small){
+    body{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+@media all and (min-width:$medium){
+    .grid-container {
+        @include grid();
+        grid-template-columns: auto auto;
+        
+    }
+    .flex-main {
+        width: 50%;
+    }
+}
+@media all and (min-width:$large){
+    .grid-container {
+        @include grid();
+        grid-template-columns: auto auto auto;
+        
+    }
+    .flex-main {
+        width: 40%;
+    }
+}

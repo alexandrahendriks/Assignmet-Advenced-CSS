@@ -1,0 +1,83 @@
+.social-media{
+    @include flex2();
+    position: absolute;
+    top: 30%;
+    right:0%;
+    width: 240px;
+    text-align: left;
+    & a{
+        padding: 10px;
+        font-size: 15px;
+        text-decoration: none;
+        transform: translate(180px , 0px);
+    }
+    & a:hover {
+        transform: translate(0px , 0px);
+        transition: all 0.5s;
+    } 
+    & .fa-laptop-code {
+        background: $colorblog;
+        color: $colorwhite;
+    } 
+    & .fa-laptop-code::before {
+        font: var(--fa-font-solid);
+        content: "\f5fc";
+        color:$colorwhite;
+        background: $colorblog;
+        padding-right: $padingicon;
+        margin-left: 8px;
+        font-size: $fontsize;
+    }
+    & .fa-twitter {
+        background: $colortwitter;
+        color: $colorwhite;
+    }
+    & .fa-twitter::before {
+        font: $fonticon;
+        content: "\f099";
+        color:$colorwhite;
+        background:$colortwitter;
+        padding-right: $padingicon;
+        margin-left: 10px;
+        font-size: $fontsize;
+    }
+    & .fa-linked-in{
+        background: $colorlinkedin;
+        color: $colorwhite;
+    }
+    & .fa-linked-in::before {
+        font: $fonticon;
+        content: "\f0e1";
+        color:$colorwhite;
+        background: $colorlinkedin;
+        padding-right: $padingicon;
+        margin-left: 15px;
+        font-size: $fontsize;
+    }
+    & .fa-facebook-f {
+        background: $colorfacebook;
+        color: $colorwhite;
+    }
+    & .fa-facebook-f::before {
+        font: $fonticon;
+        content: "\f39e";
+        color:$colorwhite;
+        background: $colorfacebook;
+        padding-right: $padingicon;
+        margin-left: 15px;
+        font-size:$fontsize;
+    }
+    & .fa-github {
+        background: $colorgithub;
+        color: $colorwhite;
+    }
+    & .fa-github::before {
+        font: $fonticon;
+        content: "\f09b";
+        color:$colorwhite;
+        background-color: $colorgithub;
+        padding-right: $padingicon;
+        margin-left: 10px;
+        font-size: $fontsize;
+    }
+}
