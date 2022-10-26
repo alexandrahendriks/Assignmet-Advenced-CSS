@@ -7,19 +7,16 @@
         @include text-p();
         }
     }
+    & .user {
+        @include user();}
     & .footer {
         @include footer();
-        & .user {
-            @include user();
+        
         }
-        & .footer-text{
-            @include footer-text();
-            & h2{
-                @include h2();
-            }
-            & .example{
-                @include example();
-            }
+        & h2 {
+            @include h2();
         }
-    }  
-}
+        & p {
+            @include example();
+        }
+    }

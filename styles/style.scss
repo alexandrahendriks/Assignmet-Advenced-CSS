@@ -4,19 +4,16 @@
 @import "./flexmain";
 @import "./grid";
 @import "./social";
-
 * {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    max-width: $width;
-    overflow-x: hidden;
     background-color:$backgroundcolor;
     font-family: 'Oxygen', sans-serif;
 }
-
 @media all and (max-width:$small){
     body{
         max-width: 100%;
