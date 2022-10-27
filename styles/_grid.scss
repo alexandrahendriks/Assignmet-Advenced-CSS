@@ -1,7 +1,6 @@
 .grid-container {
     @include grid();
     margin-left: 30px;
-    margin-top: -90px;
     grid-template-columns: auto;
 }
 
@@ -9,7 +8,7 @@
     position:relative;
     width:80%;
     height: auto;
-    margin:20px 20px -100px 20px;
+    margin:20px;
     & .flex{
         @include flex();
         flex-grow: 2;
@@ -40,7 +39,7 @@
         top:0;
         left:0;
         width: $width;
-        height: 87%;
+        height: 100%;
         align-items: center;
         justify-content: center;
         opacity: 0;
